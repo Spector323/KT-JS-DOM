@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.btn_1,
+.btn_2,
+.btn_3,
+.btn_4 {
+    position: relative;
+    margin-top: 30px; 
+    margin-bottom: 50px;
+}
+
+p {
+    margin-bottom: 10px;
+} 
+.range-1 {
+    width: 290px;
+    height: 5px;
+    appearance: none;
+    background: -webkit-linear-gradient(left, rgba(16, 182, 7, 1) 81%,#fa2802 40%);
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.range-1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: rgba(16, 182, 7, 1); 
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+}
+.number {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    justify-content: space-between;
+    position: relative; /* Добавляем позиционирование для псевдоэлементов */
+}
+
+.num {
+    position: relative; /* Добавляем позиционирование для псевдоэлементов */
+}
+
+.num::before {
+    content: '';
+    position: absolute;
+    bottom: 28px; /* Регулируем положение относительно числа */
+    left: 50%; /* Регулируем положение относительно числа */
+    transform: translateX(-50%); /* Центрируем псевдоэлементы */
+    width: 2px;
+    height: 10px;
+    background: #cccccc;
+}
+.range-2 {
+    width: 300px;
+    height: 5px;
+    appearance: none;
+    background: rgba(7, 89, 182, 1);
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.range-2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: rgba(7, 89, 182, 1);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0;
+}
+
+
+.range-3 {
+    width: 300px;
+    height: 5px;
+    appearance: none;
+    background: rgb(240, 25, 25);
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.range-3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px; /* Высота треугольника */
+    width: 18px; /* Ширина треугольника */
+    margin-top: -18px; /* Отрицательный отступ сверху */
+    border-left: 8px solid transparent; /* Левая сторона треугольника */
+    border-right: 8px solid transparent; /* Правая сторона треугольника */
+    border-top: 15px solid rgb(240, 25, 25); /* Основание треугольника */
+    cursor: pointer;
+}
+
+
+.range-4 {
+    width: 300px;
+    height: 5px;
+    appearance: none;
+    background: rgba(7, 159, 182, 1);
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.range-4::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: rgba(7, 159, 182, 1);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0;
+}

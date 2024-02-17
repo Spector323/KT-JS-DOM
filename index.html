@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="btn_1">
+            <label>Track</label><br />
+            <input type="range" class="range-1" step="20"/>
+            <span id="sliderValue1">0</span>
+            <div class="progress-bar"></div>
+            <div class="number">
+                <div class="num" style="margin-right: 20px;">0</div>
+                <div class="num" style="margin-right: 10px;">20</div>
+                <div class="num" style="margin-right: 0px;">40</div>
+                <div class="num" style="margin-left: 10px;">60</div>
+                <div class="num" style="margin-left: 12px;">80</div>
+                <div class="num" style="margin-left: 5px;">100</div>
+            </div>
+        </div>
+        <div class="btn_2">
+            <label>Divisor</label><br />
+            <input type="range" class="range-2" value="0" min="0" max="100" step="10" list="value">
+            <span id="sliderValue2">0</span>
+            <div class="progress-bar"></div>
+        </div>
+        <div class="btn_3">
+            <p>Thumb</p>
+            <input type="range" class="range-3" value="0" min="0" max="100" step="10">
+            <span id="sliderValue3">0</span>
+            <div class="progress-bar"></div>
+        </div>
+        <div class="btn_4">
+            <p>Tick</p>
+            <input type="range" class="range-4" value="0" min="0" max="100" step="2">
+            <span id="sliderValue4">0</span>
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var slider1 = document.querySelector('.range-1');
+            var sliderValue1 = document.getElementById('sliderValue1');
+            var progressBar1 = document.querySelector('.btn_1 .progress-bar');
+
+            slider1.addEventListener('input', function () {
+                sliderValue1.textContent = slider1.value;
+                const value = slider1.value;
+                const opacity = value / 100;
+                progressBar1.style.width = `${value}%`;
+                progressBar1.style.opacity = opacity;
+            });
+
+            var slider2 = document.querySelector('.range-2');
+            var sliderValue2 = document.getElementById('sliderValue2');
+            var progressBar2 = document.querySelector('.btn_2 .progress-bar');
+
+            slider2.addEventListener('input', function () {
+                sliderValue2.textContent = slider2.value;
+                const value = slider2.value;
+                const opacity = value / 100;
+                progressBar2.style.width = `${value}%`;
+                progressBar2.style.opacity = opacity;
+            });
+
+            var slider3 = document.querySelector('.range-3');
+            var sliderValue3 = document.getElementById('sliderValue3');
+            var progressBar3 = document.querySelector('.btn_3 .progress-bar');
+
+            slider3.addEventListener('input', function () {
+                sliderValue3.textContent = slider3.value;
+                const value = slider3.value;
+                const opacity = value / 100;
+                progressBar3.style.width = `${value}%`;
+                progressBar3.style.opacity = opacity;
+            });
+
+            var slider4 = document.querySelector('.range-4');
+            var sliderValue4 = document.getElementById('sliderValue4');
+            var progressBar4 = document.querySelector('.btn_4 .progress-bar');
+
+            slider4.addEventListener('input', function () {
+                sliderValue4.textContent = slider4.value;
+                const value = slider4.value;
+                const opacity = value / 100;
+                progressBar4.style.width = `${value}%`;
+                progressBar4.style.opacity = opacity;
+            });
+        });
+    </script>
+</body>
+</html>
